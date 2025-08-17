@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puzzle Oyunu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <noscript style="padding:12px;display:block;background:#ffe4e6;color:#111;">
+    Bu site JavaScript gerektirir. Lütfen tarayıcınızda JavaScript’i etkinleştirin.
+  </noscript>
+
+  <div id="start-screen" class="screen">
+    <h1>🎮 Puzzle Oyununa Hoşgeldin</h1>
+    <button id="start-btn">Puzzle’a Başla</button>
+  </div>
+
+  <div id="game-screen" class="screen" style="display:none;">
+    <h2>Puzzle’ı Tamamla 🧩</h2>
+    <div id="puzzle-container" aria-label="Puzzle alanı"></div>
+    <p class="hint">📱 Telefonda: bir parçaya dokun, sonra yer değiştirmek istediğin parçaya dokun.</p>
+  </div>
+
+  <div id="congrats-screen" class="screen" style="display:none;">
+    <h2>🎉 Tebrikler! 🎉</h2>
+    <!-- src eklendi -->
+    <video id="video" width="100%" controls playsinline src="video.mp4"></video>
+    <button id="replay-btn" class="secondary">Tekrar Oyna</button>
+  </div>
+
+  <!-- Arka plan müziği -->
+  <audio id="bg-music" src="music.mp3" loop></audio>
+
+  <!-- Konfeti kütüphanesi (internet gerekir) -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <!-- Uygulama kodu -->
+  <script src="script.js"></script>
+</body>
+</html>
